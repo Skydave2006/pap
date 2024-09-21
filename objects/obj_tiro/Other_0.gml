@@ -1,0 +1,1 @@
+instance_destroy(); //destruí quando sai da room
