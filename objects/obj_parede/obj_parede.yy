@@ -1,12 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_tiro",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_parede","path":"objects/obj_parede/obj_parede.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_parede",
+  "eventList":[],
   "managed":true,
-  "name":"obj_tiro",
+  "name":"obj_parede",
   "overriddenProperties":[],
   "parent":{
     "name":"Objetos",
@@ -29,10 +26,10 @@
   "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
-  "solid":false,
+  "solid":true,
   "spriteId":{
-    "name":"tiro",
-    "path":"sprites/tiro/tiro.yy",
+    "name":"Sprite3",
+    "path":"sprites/Sprite3/Sprite3.yy",
   },
   "spriteMaskId":null,
   "visible":true,

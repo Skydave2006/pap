@@ -6,18 +6,18 @@ key_shoot = keyboard_check_pressed(ord("K"));//atirar
 #endregion
 
 #region Movimentação
-var move = key_right - key_left
+var _move = key_right - key_left
 
-hspd = move * spd;
+hspd = _move * spd;
 
 vspd= vspd+ grv;
 
 // Colisão Horizontal
 if(hspd != 0) image_xscale = sign(hspd);
 
-if place_meeting(x+hspd,y,parede)
+if place_meeting(x+hspd,y,obj_parede)
 {
-	while(!place_meeting(x+sign(hspd),y,parede))
+	while(!place_meeting(x+sign(hspd),y,obj_parede))
 	{
 		x= x + sign(hspd)
 	
@@ -29,9 +29,9 @@ x = x+ hspd
 // Colisão Vertical
 if(hspd != 0) image_xscale = sign(hspd);
 
-if place_meeting(x,y+vspd,parede)
+if place_meeting(x,y+vspd,obj_parede)
 {
-	while(!place_meeting(x,y+sign(vspd),parede))
+	while(!place_meeting(x,y+sign(vspd),obj_parede))
 	{
 		y= y + sign(vspd)
 	
@@ -41,7 +41,7 @@ if place_meeting(x,y+vspd,parede)
 y = y+ vspd
 
 //Salto
-if place_meeting(x,y+1,parede) and key_jump
+if place_meeting(x,y+1,obj_parede) and key_jump
 {
 vspd -= 12;
 }
