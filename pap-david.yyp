@@ -37,10 +37,13 @@
   "name":"pap-david",
   "resources":[
     {"id":{"name":"Obj_camera","path":"objects/Obj_camera/Obj_camera.yy",},},
+    {"id":{"name":"obj_gancho","path":"objects/obj_gancho/obj_gancho.yy",},},
     {"id":{"name":"obj_parede","path":"objects/obj_parede/obj_parede.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"obj_tiro","path":"objects/obj_tiro/obj_tiro.yy",},},
     {"id":{"name":"niv_1","path":"rooms/niv_1/niv_1.yy",},},
+    {"id":{"name":"crp_gancho","path":"sprites/crp_gancho/crp_gancho.yy",},},
+    {"id":{"name":"gancho","path":"sprites/gancho/gancho.yy",},},
     {"id":{"name":"player","path":"sprites/player/player.yy",},},
     {"id":{"name":"relva","path":"sprites/relva/relva.yy",},},
     {"id":{"name":"Sprite3","path":"sprites/Sprite3/Sprite3.yy",},},

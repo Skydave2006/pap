@@ -3,6 +3,7 @@ key_right = keyboard_check(ord("D")) //anda para a direita
 key_left = keyboard_check(ord("A")) //anda para a esquerda
 key_jump = keyboard_check(vk_space) //pula
 key_shoot = mouse_check_button_pressed(mb_left);//atirar
+key_gancho = mouse_check_button_pressed(mb_right);//gancho
 #endregion
 
 #region Movimentação
@@ -60,20 +61,91 @@ var jogador_y = obj_player.y;
 
 if key_shoot and global.bullets > 0
 {
-
 	
 	with(instance_create_layer(jogador_x,jogador_y,"shoot",obj_tiro))
 	{
+		
 		//bala disparada
 		//global.bullets--;
 		//velocidade
 		speed = 30;
+		//velocidade teste
+		//speed = 5;
 		//direção
 		direction = point_direction(jogador_x, jogador_y, mouse_x, mouse_y);
+		// angulo
+		image_angle = direction;
+		
+	}		
+	with(instance_create_layer(jogador_x,jogador_y,"shoot",obj_tiro))
+	{
+		
+		//bala disparada
+		//global.bullets--;
+		//velocidade
+		speed = 30;
+		//velocidade teste
+		//speed = 5;
+		//direção
+		direction = point_direction(jogador_x, jogador_y, mouse_x, mouse_y) + 35;
+		// angulo
+		image_angle = direction;
+		
+	}	
+	with(instance_create_layer(jogador_x,jogador_y,"shoot",obj_tiro))
+	{
+		
+		//bala disparada
+		//global.bullets--;
+		//velocidade
+		speed = 30;
+		//velocidade teste
+		//speed = 5;
+		//direção
+		direction = point_direction(jogador_x, jogador_y, mouse_x, mouse_y) - 35;
+		// angulo
+		image_angle = direction;
+		
+	}
+	with(instance_create_layer(jogador_x,jogador_y,"shoot",obj_tiro))
+	{
+		
+		//bala disparada
+		//global.bullets--;
+		//velocidade
+		speed = 30;
+		//velocidade teste
+		//speed = 5;
+		//direção
+		direction = point_direction(jogador_x, jogador_y, mouse_x, mouse_y) + 17.5;
+		// angulo
+		image_angle = direction;
+		
+	}	
+	with(instance_create_layer(jogador_x,jogador_y,"shoot",obj_tiro))
+	{
+		
+		//bala disparada
+		//global.bullets--;
+		//velocidade
+		speed = 30;
+		//velocidade teste
+		//speed = 5;
+		//direção
+		direction = point_direction(jogador_x, jogador_y, mouse_x, mouse_y) - 17.5;
 		// angulo
 		image_angle = direction;
 		
 	}	
 	
 }
+#endregion
+
+#region Gancho
+
+if key_gancho 
+{
+	
+}
+
 #endregion
