@@ -87,7 +87,7 @@ if key_shoot and global.bullets > 0
 		//velocidade teste
 		//speed = 5;
 		//direção
-		direction = point_direction(jogador_x, jogador_y, mouse_x, mouse_y) + 35;
+		direction = point_direction(jogador_x, jogador_y, mouse_x, mouse_y) + 25;
 		// angulo
 		image_angle = direction;
 		
@@ -102,7 +102,7 @@ if key_shoot and global.bullets > 0
 		//velocidade teste
 		//speed = 5;
 		//direção
-		direction = point_direction(jogador_x, jogador_y, mouse_x, mouse_y) - 35;
+		direction = point_direction(jogador_x, jogador_y, mouse_x, mouse_y) - 25;
 		// angulo
 		image_angle = direction;
 		
@@ -117,7 +117,7 @@ if key_shoot and global.bullets > 0
 		//velocidade teste
 		//speed = 5;
 		//direção
-		direction = point_direction(jogador_x, jogador_y, mouse_x, mouse_y) + 17.5;
+		direction = point_direction(jogador_x, jogador_y, mouse_x, mouse_y) + 12.5;
 		// angulo
 		image_angle = direction;
 		
@@ -132,7 +132,7 @@ if key_shoot and global.bullets > 0
 		//velocidade teste
 		//speed = 5;
 		//direção
-		direction = point_direction(jogador_x, jogador_y, mouse_x, mouse_y) - 17.5;
+		direction = point_direction(jogador_x, jogador_y, mouse_x, mouse_y) - 12.5;
 		// angulo
 		image_angle = direction;
 		
@@ -146,6 +146,15 @@ if key_shoot and global.bullets > 0
 if key_gancho 
 {
 	
+	with(instance_create_layer(jogador_x, jogador_y,"gancho",obj_gancho))
+	{
+		//velocidade
+		speed = 25;
+		// direção
+		direction = point_direction(jogador_x, jogador_y, mouse_x, mouse_y);
+		// angulo
+		image_angle = direction;
+	}
 }
 
 #endregion
