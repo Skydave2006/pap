@@ -1,1 +1,0 @@
-instance_destroy(); // destrui em contacto com a parede
