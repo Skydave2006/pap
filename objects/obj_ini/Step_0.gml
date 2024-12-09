@@ -104,7 +104,9 @@ switch states_ini
 	
 	case STATE_INI.ATK:	
 	#region ATK
-	
+	if distance_to_object(obj_player) > 100{
+			states_ini = STATE_INI.FREE;
+		}
 	
 					
 	#endregion
