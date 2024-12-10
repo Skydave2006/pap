@@ -96,7 +96,8 @@ switch states_ini
 		
 		}
 		
-		if distance_to_object(obj_player) < 100{
+		if distance_to_object(obj_player) < 15
+		{
 			states_ini = STATE_INI.ATK;
 		}
 		#endregion
@@ -104,9 +105,14 @@ switch states_ini
 	
 	case STATE_INI.ATK:	
 	#region ATK
-	if distance_to_object(obj_player) > 100{
-			states_ini = STATE_INI.FREE;
-		}
+	if image_index > image_number -1 
+	{
+		states_ini = STATE_INI.FREE;
+		global.life--;
+	}
+	
+	
+	
 	
 					
 	#endregion
@@ -117,8 +123,11 @@ switch states_ini
 if states_ini = STATE_INI.ATK
 {
 	hspd = 0;
+	sprite_index = spr_ini_atk;
+	
 }
 if states_ini = STATE_INI.FREE
 {
 	hspd = 0;
+	sprite_index = inimigo;
 }

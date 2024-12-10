@@ -13,5 +13,26 @@ enum STATES{
 	FREE,
 	FREEZE,
 	FLY
+	
+	
 
+}
+
+if state == STATES.FREE
+{
+	sprite_index = player;
+	str_state = "FREE";
+
+}
+
+
+if state == STATES.FREEZE
+{
+	
+	str_state = "FREEZE";
+
+}
+if state == STATES.FLY
+{
+	str_state = "FLY";
 }

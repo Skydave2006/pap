@@ -1,6 +1,9 @@
 #region Life
-x_life= cam_x - 1325;
-y_life = cam_y - 700;
+//x750
+//y400
+x_life= cam_x - 700;
+y_life = cam_y - 300;
+
 if global.life = 4{
 	draw_sprite(spr_vida,4,x_life,y_life)
 }
@@ -19,18 +22,19 @@ if global.life = 0{
 #endregion
 
 #region points
-x_pts = cam_x - 1350;
-y_pts = cam_y - 750;
+x_pts = cam_x - 700;
+y_pts = cam_y - 350;
 pts_to_string = string(global.points)
 
 out = "Pontos:" + pts_to_string;
 draw_set_font(pri_font)
 draw_text(x_pts,y_pts,out);
+
 #endregion
 
 #region bullets
-x_ammo = cam_x - 1350;
-y_ammo = cam_y- 100;
+x_ammo = cam_x - 700;
+y_ammo = cam_y + 250;
 draw_set_font(pri_font)
 
 
