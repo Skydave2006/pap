@@ -6,7 +6,7 @@ global.bullets = 5;
 global.life = 4;
 global.points = 0;
 window_set_fullscreen(true);
-
+window_set_cursor(cr_none);
 state = STATES.FREE;
 
 enum STATES{

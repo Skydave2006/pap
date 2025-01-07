@@ -72,7 +72,7 @@ switch(state)
 		if place_meeting(x,y+1,obj_parede) and key_jump
 		{
 			
-			vspd -= 12;			
+			vspd -= 10;			
 		}
 		
 		#endregion

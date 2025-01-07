@@ -12,8 +12,8 @@
   "name":"obj_player",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objetos",
-    "path":"folders/Objetos.yy",
+    "name":"obj_player_grp",
+    "path":"folders/Objetos/obj_player_grp.yy",
   },
   "parentObjectId":null,
   "persistent":false,
