@@ -1,21 +1,22 @@
-spd = 5;
-hspd = 0;
-vspd = 0;
-grv = 0.4;
+
+
 global.bullets = 5;
 global.life = 4;
 global.points = 0;
+
+
+
 window_set_fullscreen(true);
 window_set_cursor(cr_none);
+
 state = STATES.FREE;
 
 enum STATES{
 	FREE,
 	FREEZE,
-	FLY
-	
-	
-
+	FLY,
+	DEAD
+		
 }
 
 if state == STATES.FREE
@@ -35,4 +36,9 @@ if state == STATES.FREEZE
 if state == STATES.FLY
 {
 	str_state = "FLY";
+}
+if state == STATES.DEAD
+{
+	str_state = "DEAD";
+
 }

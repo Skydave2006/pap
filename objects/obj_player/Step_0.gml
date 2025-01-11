@@ -1,10 +1,6 @@
 
 
-if global.life< 1{
-  room_restart()
-  
 
-}
 	
 if global.bullets > 5{
 	for (var i = global.bullets;i>5;i--)
@@ -70,9 +66,8 @@ switch(state)
 
 		//Salto
 		if place_meeting(x,y+1,obj_parede) and key_jump
-		{
-			
-			vspd -= 10;			
+		{	
+			vspd -= jump;			
 		}
 		
 		#endregion
@@ -106,12 +101,25 @@ switch(state)
 		}
 		#endregion
 		
+		#region DEAD
+		
+		if global.life< 1{
+			 state = STATES.DEAD;
+  
+
+			}
+		#endregion
 		break;
 	}
 	
 	case STATES.FREEZE:state_freeze();break;
 	//o state FLY é so um erro a passar o codigo de movimento para o scrip do state free então deixei para tras o script FREE e deixei codigo no case
 	case STATES.FLY:state_fly();break;
+	
+	case STATES.DEAD:
+		room_goto(DEATH_Room)
+		global.bullets = 0 ;
+	break;
 	
 		
 	
