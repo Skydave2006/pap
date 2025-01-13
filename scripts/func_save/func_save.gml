@@ -3,6 +3,7 @@ global.game_data =
 	room_data: {}
 	
 }
+
 function Save(){
 	
 	save_room();
@@ -121,8 +122,7 @@ function Load(){
 
 		//file_text_close(_file);
 	}
-}
-	
+}	
 	
 function load_room(){
 	
