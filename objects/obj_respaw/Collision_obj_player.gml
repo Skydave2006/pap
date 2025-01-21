@@ -5,6 +5,6 @@ if rd ==1
 
 }
 else{
-room_goto(niv_1)
+room_goto(nivel_1)
 
 }

@@ -131,7 +131,8 @@ function load_room(){
 	
 	if(_array != undefined)
 	{
-		
+		instance_destroy(obj_ini)
+		instance_destroy(obj_player)
 			
 		
 		for(var i = 0;i < array_length(_array);i += 1)
@@ -139,24 +140,23 @@ function load_room(){
 			var _struct = _array[ i];
 			if(i == 0)
 			{
-				var _key = _struct.room
-				show_debug_message("AQUIIIIIIIIIIIIII",_key)
-				room_goto(_key)
-				instance_destroy(obj_ini)
-				instance_destroy(obj_player)
+				var _key = string(_struct.room)
+				show_debug_message("AQUIIIIIIIIIIIIII ",_key)
+				
+				
 			
 			
 			}
 			else if(i == array_length(_array)-1)
 			{
-				instance_create_layer(_struct.x, _struct.y, "Instances_1", asset_get_index(_struct.object), _struct);
+				instance_create_layer(_struct.x, _struct.y, "Instances", asset_get_index(_struct.object), _struct);
 				global.life = _struct.life;
 				global.bullets = _struct.bullets;
 				global.points = _struct.points;
 			
 			}else{
 			
-			instance_create_layer(_struct.x, _struct.y, "Instances_1", asset_get_index(_struct.object), _struct);
+			instance_create_layer(_struct.x, _struct.y, "Instances", asset_get_index(_struct.object), _struct);
 			}
 			
 			
