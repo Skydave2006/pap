@@ -1,9 +1,10 @@
 switch states_ini
 {
+	//Se o inimigo estiver livre
 	case STATE_INI.FREE:
 	
 		#region Movimentação
-		//hspd = 0.5 * spd
+		
 		
 		vspd= vspd+ grv;
 
@@ -46,8 +47,10 @@ switch states_ini
 		#endregion
 		
 	break;
+	//Se o inimigo estiver congelado
 	case STATE_INI.FREEZE:
 	break;
+	//Se o inimigo começar a presseguir o jogador
 	case STATE_INI.CHASE:
 		#region Movimentação
 		
@@ -85,17 +88,18 @@ switch states_ini
 		}
 		y = y+ vspd
 		
-		
-		vir = sign(obj_player.x- x)
+		// vé onde o jogador esta
+		vir = sign(obj_player.x - x)
+		//pressegue o jogador
 		hspd =vir * 2;
 		
-		
+		// ve se o jogador conseguio escapar
 		 if distance_to_object(obj_player) > distance
 		{
 			states_ini = STATE_INI.FREE;
 		
 		}
-		
+		// ve se o jogador esta muito perto para começar a atacar
 		if distance_to_object(obj_player) < 15
 		{
 			states_ini = STATE_INI.ATK;
@@ -105,6 +109,7 @@ switch states_ini
 	
 	case STATE_INI.ATK:	
 	#region ATK
+	// ve o indice do sprite para que no final da animação de dano e volte para o estado livre
 	if image_index > image_number -1 
 	{
 		states_ini = STATE_INI.FREE;
@@ -119,13 +124,14 @@ switch states_ini
 	break;
 
 }
-
+//sprite de Atack
 if states_ini = STATE_INI.ATK
 {
 	hspd = 0;
 	sprite_index = spr_ini_atk;
 	
 }
+//sprites de inimigo livre
 if states_ini = STATE_INI.FREE
 {
 	hspd = 0;

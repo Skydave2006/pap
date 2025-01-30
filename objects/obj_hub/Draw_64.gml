@@ -1,13 +1,14 @@
 
-
+//x750
+//y400
 
 
 #region Life
-//x750
-//y400
+//posição horizontal da vida
 x_life= cam_x - 700;
+//posição vertical da vida
 y_life = cam_y - 300;
-
+//desenhar a vida
 if global.life = 4{
 	draw_sprite(spr_vida,4,x_life,y_life)
 }
@@ -26,8 +27,11 @@ if global.life = 0{
 #endregion
 
 #region points
+//posição horizontal
 x_pts = cam_x - 700;
+//posição vertical
 y_pts = cam_y - 350;
+//pontos para string
 pts_to_string = string(global.points)
 
 out = "Pontos:" + pts_to_string;
