@@ -80,6 +80,21 @@ function save_room(){
 		array_push(_array,_struct)
 		
 	}
+	with(obj_coin)
+	{
+		var _struct = 
+		{
+			object: object_get_name(object_index),
+			x: x,
+			y: y,
+			image_index: image_index
+	
+		};
+		
+		
+		array_push(_array,_struct)
+		
+	}
 	
 	with(obj_player){
 		var _struct = 
