@@ -54,6 +54,8 @@
     {"name":"bnt_jgr_spr","order":2,"path":"sprites/bnt_jgr_spr/bnt_jgr_spr.yy",},
     {"name":"end_niv","order":21,"path":"sprites/end_niv/end_niv.yy",},
     {"name":"inimigo","order":1,"path":"sprites/inimigo/inimigo.yy",},
+    {"name":"nether_def_spr","order":27,"path":"sprites/nether_def_spr/nether_def_spr.yy",},
+    {"name":"nether_spr","order":26,"path":"sprites/nether_spr/nether_spr.yy",},
     {"name":"spr_ammo","order":1,"path":"sprites/spr_ammo/spr_ammo.yy",},
     {"name":"spr_cursor","order":1,"path":"sprites/spr_cursor/spr_cursor.yy",},
     {"name":"spr_def_relva","order":1,"path":"sprites/spr_def_relva/spr_def_relva.yy",},
@@ -70,5 +72,6 @@
     {"name":"tiro","order":2,"path":"sprites/tiro/tiro.yy",},
     {"name":"TileSet1","order":17,"path":"tilesets/TileSet1/TileSet1.yy",},
     {"name":"TileSet2","order":19,"path":"tilesets/TileSet2/TileSet2.yy",},
+    {"name":"TileSet3","order":25,"path":"tilesets/TileSet3/TileSet3.yy",},
   ],
 }
