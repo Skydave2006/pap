@@ -3,7 +3,10 @@ global.game_data =
 	room_data: {}
 	
 }
-
+/*
+ A função Save pega na informação adquerida pela função save_room salva todos os dados num ficheiro txt(em formato json),
+ cria um buffer para melhorar a fluides do codigo e elimina quando não for mais necessario,
+*/
 function Save(){
 	
 	save_room();
@@ -27,7 +30,10 @@ function Save(){
 
 
 }
-	
+ /*
+  A função save_room salva todo oque esta na sala atual do jogo,
+  exemplo: o jogador esta no niv_1 salva todo oque esta no niv_1 inclusive o nome da sala
+ */	
 function save_room(){
 	var _array = [];
 	var _struct_key =
@@ -114,7 +120,9 @@ function save_room(){
 	
 	struct_set(global.game_data.room_data, room_get_name( room),_array);
 }
-	
+ /*
+ A função Load é responsavel por pegar no ficheiro do save e ler
+ */	
 function Load(){
 
 	if(file_exists("save.txt"))
@@ -138,7 +146,9 @@ function Load(){
 		//file_text_close(_file);
 	}
 }	
-	
+ /*
+ A função load_room é responsavel por carregar todo oque foi lido na função Load
+ */		
 function load_room(){
 	
 	var _array = struct_get(global.game_data.room_data, room_get_name( room));
